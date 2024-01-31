@@ -1,0 +1,20 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>
+    Список рецептов, в состав которых не входит {{ingredient.name}}, или входит в количестве менее 10гр.
+</h1>
+<table>
+    <tr>
+        <th>Id</th><th>Название</th>
+    </tr>
+    {% for recipe in recipes %}
+    <tr>
+        <td>{{recipe.pk}}</td><td>{{recipe.name}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
